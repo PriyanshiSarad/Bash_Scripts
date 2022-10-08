@@ -16,8 +16,14 @@
 DATE="$(date +%d-%m-%Y)"
 BACKUP_DIR=$PWD
 
+echo
+echo "Creating backup of $HOME inside $BACKUP_DIR"
+
 # Write sudo before tar command if you want this to run as a root user.
 # With &> I am deleting the STDERR and STDOUT by redirecting it to the /dev/null bit-bucket.
 tar -czpvf "$BACKUP_DIR/backup-$DATE.tgz" "$HOME" &> /dev/null
+
+echo
+echo "Backup Completed Successfully !!"
 
 exit 0
