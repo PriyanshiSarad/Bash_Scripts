@@ -10,8 +10,8 @@
 # Usage:
 # ./cruft_remover.sh 
 
-read -p "Mention the directory from which you want to remove all the cruft files: " dir
-read -p "Mention the number of days since the files you want to remove are last modified: " days
+read -r -p "Mention the directory from which you want to remove all the cruft files: " dir
+read -r -p "Mention the number of days since the files you want to remove are last modified: " days
 
 readarray -t arr < <(find "$dir" -maxdepth 1 -type f -mtime "+$days" )
 
