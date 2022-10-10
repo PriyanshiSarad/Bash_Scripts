@@ -5,9 +5,10 @@
 # Date Last Modified: 10-10-2022
 
 # Description:
-# This script will update and upgrade your system and then will reboot the system as well.
+# This script will update and upgrade the Ubuntu Linux Server and also reboot when required.
 
-# Usage: ./system_update.sh
+# Usage:
+# ./system_update.sh
 
 echo -e '\033[0;32mStep-1 :: Updating the system \033[0m'
 apt-get update
